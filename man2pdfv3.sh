@@ -5,11 +5,11 @@ man -t $1 | ps2pdf - $1_man_page.pdf
 
 #cp /home/jason/Dropbox/
 #/home/jason/Dropbox/man_pages_PDF/
-mv -i $1_man_page.pdf /home/$USER/Dropbox/man_pages_PDF/
+mv -i $1_man_page.pdf "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/"
 
 function openPDF
 { # This is about as simple as functions get.
-	nohup gnome-open /home/$USER/Dropbox/man_pages_PDF/$1.pdf
+	nohup gnome-open "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/$1.pdf"
 } # Function declaration must precede call.
 
 while true; do
