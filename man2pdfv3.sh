@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#logging events
+logger -p user.info "man2pdfv3.sh script started"
 echo Converting manual page for $1 to pdf format in file named $1.pdf
 echo Then copying file to man page directory in DropBox directory. 
 man -t $1 | ps2pdf - $1_man_page.pdf
