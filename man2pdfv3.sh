@@ -12,11 +12,11 @@ mv -i $1_man_page.pdf "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/"
 
 function openPDF
 { # This is about as simple as functions get.
-	nohup gnome-open "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/$1.pdf"
+    nohup gnome-open "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/$1.pdf"
 } # Function declaration must precede call.
 
 while true; do
-	read -e -p "Do you wish to view the created pdf?" -i "y" yn
+    read -e -p "Do you wish to view the created pdf?" -i "y" yn
     #read -p "Do you wish to view the created pdf?" yn
     case $yn in
         [Yy]* ) openPDF $1_man_page; break;;
@@ -24,7 +24,7 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
-
+logger -p user.info "man2pdfv3.sh script ended"
 #12-01-2017
 #have new dropbox folder location: /home/jason/Dropbox/Ubuntu Apps and Docs
 #creating a version 3 of man2pdf to add this new path
