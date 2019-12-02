@@ -9,6 +9,8 @@ man -t $1 | ps2pdf - $1_man_page.pdf
 #cp /home/jason/Dropbox/
 #/home/jason/Dropbox/man_pages_PDF/
 mv -i $1_man_page.pdf "/home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/"
+echo "PDF file saved at /home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/$1_man_page.pdf"
+logger -p user.info "PDF file saved at /home/jason/Dropbox/Ubuntu Apps and Docs/man_pages_PDF/$1_man_page.pdf"
 
 function openPDF
 { # This is about as simple as functions get.
