@@ -2,7 +2,7 @@
 
 #logging events
 logger -p user.info "man2pdfv3.sh script started"
-echo Converting manual page for $1 to pdf format in file named $1.pdf
+echo Converting manual page for $1 to pdf format in a file named $1_man_page.pdf
 echo Then copying file to man page directory in DropBox directory. 
 man -t $1 | ps2pdf - $1_man_page.pdf
 
@@ -22,7 +22,7 @@ while true; do
     #read -p "Do you wish to view the created pdf?" yn
     case $yn in
         [Yy]* ) openPDF $1_man_page; break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
