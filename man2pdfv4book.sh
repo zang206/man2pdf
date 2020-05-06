@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Written by jason Procknw
+# Written by jason Procknow
 
 #logging events
 logger -p user.info "man2pdfv4.sh script started"
