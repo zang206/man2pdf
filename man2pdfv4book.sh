@@ -3,10 +3,13 @@
 # Written by Jason Procknow
 
 #logging events
-logger -p user.info "man2pdfv4.sh script started"
-echo man2pdfv4.sh script started
-echo Converting manual page for $1 to pdf format in a file named $1_man_page.pdf
-echo Then copying file to man page directory in DropBox directory.
+logger -p user.info "man2pdfv4book.sh script started"
+echo man2pdfv4book.sh script started
+echo Converting manual page for $1 to pdf format with single pages named file $1_man_page.pdf
+echo And a booklet version of $1 manual with file named $1_man_page-book.pdf
+echo Then copying files to man page directory in DropBox directory located below
+echo "/home/jason/Dropbox/Ubuntu_Apps_and_Docs/man_pages_PDF/"
+
 man -t $1 | ps2pdf - $1_man_page.pdf
 
 pdfbook2 $1_man_page.pdf
