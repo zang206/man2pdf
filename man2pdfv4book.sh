@@ -62,8 +62,6 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
-echo done
-logger -p user.info "man2pdfv4.sh script ended"
 
 
 while true; do
